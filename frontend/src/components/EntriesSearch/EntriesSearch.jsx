@@ -1,5 +1,5 @@
 import useEntries from '../hooks/useEntries';
-import Block from '../shared/block/Block';
+import Entry from '../entry/Entry';
 import HomeSearch from '../home-search/HomeSearch';
 
 import './entriesSearch.css';
@@ -17,7 +17,7 @@ const EntriesSearch = () => {
       <ul className='block-container'>
         {entries.length > 0 ? (
           entries.map((entry) => {
-            return <li key={entry.id}>{entry.description}</li>;
+            return <Entry key={entry.id} entry={entry} />;
           })
         ) : (
           <li>¡No se ha encontrado ninguna entrada!</li>

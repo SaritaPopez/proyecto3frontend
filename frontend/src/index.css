@@ -1,9 +1,11 @@
 body {
   margin: 0;
-  padding:0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 :root {
   background-color: rgba(238, 223, 223, 0.486);
+  max-height: 400px;
+  overflow-y: scroll;
 }

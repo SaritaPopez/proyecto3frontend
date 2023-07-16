@@ -1,6 +1,4 @@
 import Header from '../../components/header/Header';
-import HomeSearch from '../../components/home-search/HomeSearch';
-import Block from '../../components/shared/block/Block';
 import Footer from '../../components/footer/Footer';
 import EntriesSearch from '../../components/EntriesSearch/EntriesSearch';
 

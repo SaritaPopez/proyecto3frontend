@@ -6,11 +6,6 @@ import './homeSearch.css';
 const HomeSearch = ({ searchParams, setSearchParams }) => {
   const [keyword, setKeyword] = useState(searchParams.get('keyword') || '');
 
-  const handleSearch = (e) => {
-    e.preventDefault();
-    setSearchParams(new URLSearchParams({ keyword }));
-  };
-
   return (
     <>
       <form
@@ -27,7 +22,7 @@ const HomeSearch = ({ searchParams, setSearchParams }) => {
           value={keyword}
           onChange={(e) => setKeyword(e.target.value)}
         />
-        <button className='buttonsearch' type='submit'>
+        <button className='buttonsearch'>
           <img src='src/assets/search.png' alt='lupa con lineas' />
         </button>
       </form>
