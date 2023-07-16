@@ -8,28 +8,28 @@ const useEntries = () => {
   const [loading, setLoading] = useState(false);
 
   // realizamos peticion para obtener las entries
-  const fetchEntries = async () => {
-    try {
-      setLoading(true);
-
-      const res = await fetch(
-        `http://localhost:8080/entries?${searchParams.toString()}`
-        // los searchparams son los queryparams.
-      );
-
-      const body = await res.json();
-
-      if (!res.ok) {
-        throw new Error(body.message);
-      }
-      setEntries(body.data.entrties);
-    } catch (err) {
-      setErrorMessage(err.message);
-    } finally {
-      setLoading(false); //evitamos que el usuario pueda darle otra vez al boton mientras se envia la petición.
-    }
-  };
   useEffect(() => {
+    const fetchEntries = async () => {
+      try {
+        setLoading(true);
+
+        const res = await fetch(
+          `http://localhost:8080/entries?${searchParams.toString()}`
+          // los searchparams son los queryparams.
+        );
+
+        const body = await res.json();
+
+        if (!res.ok) {
+          throw new Error(body.message);
+        }
+        setEntries(body.data.entries);
+      } catch (err) {
+        setErrorMessage(err.message);
+      } finally {
+        setLoading(false); //evitamos que el usuario pueda darle otra vez al boton mientras se envia la petición.
+      }
+    };
     fetchEntries();
   }, [searchParams]);
 

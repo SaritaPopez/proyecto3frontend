@@ -1,4 +1,3 @@
-
 import Header from '../../components/header/Header';
 import HomeSearch from '../../components/home-search/HomeSearch';
 import Block from '../../components/shared/block/Block';
@@ -15,7 +14,6 @@ function Home() {
         <h2>Discover your City</h2>
         <p>Discover fun new cities below</p>
       </section>
-      <HomeSearch />
       <EntriesSearch />
       <Footer />
     </div>
